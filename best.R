@@ -19,7 +19,7 @@ best <- function(state, outcome) {
         valid_outcomes
         
         if (!state %in% valid_states) stop('Invalid state')
-        if (!outcome %in% valid_outcome) stop ('Invalid outcome')
+        if (!outcome %in% valid_outcomes) stop ('Invalid outcome')
         
         ##Associate column names with column numbers
         outcome_column_numbers <- c (11, 17, 23)
