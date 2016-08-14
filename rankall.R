@@ -5,7 +5,7 @@ rankall <- function(outcome, num = "best") {
         df <- read.csv("outcome-of-care-measures.csv", colClasses = "character")  
         
         # Check that outcome is valid
-
+        
         valid_outcomes <- c('heart attack', 'heart failure', 'pneumonia')
         valid_outcomes
         
@@ -36,12 +36,26 @@ rankall <- function(outcome, num = "best") {
         
         i <- 1
         for (s in state) {
-                
+                h_list <- subset(df, df$State == s, c(col_num, Hospital.Name))
+                h_list <- h_list[order(h_list[,1], h_list[,2], na.last = NA), ]
+           
+                if (num == 'worst') {
+                        n <- nrow(h_list)
+                }
+                if (!n %in% 1:nrow(h_list)) {
+                        hospital[i] <- 'NA';
+                }
+                else {
+                        hospital[i] <- h_list[n,2]
+                }
+                i <- i +1
         }
         
-        ## Create a hospital list
         
-        h_list <- subset(df, state, c(col_num, Hospital.Name))
         
+        # Return the dara
+        return(data.frame(hospital, state))
         
 }
+
+head(rankall("heart attack", 20), 10)
