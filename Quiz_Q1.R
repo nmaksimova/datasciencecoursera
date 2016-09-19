@@ -49,4 +49,20 @@ merge_tabs = merge(gdp_read, edu_read, by = "CountryCode")
 nrow(merge_tabs)
 
 arrange(merge_tabs, desc(Rank))
+head(GDP)
 arrange(merge_tabs, desc(Rank))[13, Economy]
+
+##Queston 4
+
+tapply(merge_tabs$Rank, merge_tabs$'Income Group', mean)
+print(merge_tabs, 5)
+
+## Question 5
+## Cut the GDP ranking into 5 separate quantile groups. 
+## Make a table versus Income.Group.
+## How many countries are Lower middle income but amoung the 38 nations with highest GDP?
+install.packages("Hmisc")
+library(Hmisc)
+
+merge_tabs$RankGroups <- cut2(merge_tabs$Rank, g = 5)
+table(merge_tabs$RankGroups, merge_tabs$`Income Group`)
