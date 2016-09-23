@@ -15,8 +15,8 @@ The goal of the project was to to prepare tidy data that can be used for later a
 	* `y_train.txt`
 	* `y_test.txt`
 
-**Once those steps are complete, you can run the R script [run_analysis.R] (datasciencecoursera/Getting_And_Cleaning_Data/Week4/run_analysis.R). It requires the reshape2 package, which can be downloaded from CRAN.
+**Once those steps are complete, you can run the R script [run_analysis.R] (https://github.com/nmaksimova/datasciencecoursera/blob/master/Getting_And_Cleaning_Data/Week4/run_analysis.R). It requires the reshape2 package, which can be downloaded from CRAN.
 
-**The output of the R script is a tidy data set, [tidy.csv] (datasciencecoursera/Getting_And_Cleaning_Data/Week4/tidy.csv)**
+**The output of the R script is a tidy data set, [tidy.csv] (https://github.com/nmaksimova/datasciencecoursera/blob/master/Getting_And_Cleaning_Data/Week4/tidy.csv)**
 
 You can read more about the data and the analysis in the code book.
