@@ -75,6 +75,7 @@ CombinedData <- CombinedData[, meanstd]
 
 ## STEP 3.
 ## Uses descriptive activity names to name the activities in the data set
+## This was made earlier in the code in STEP1
 names(CombinedData)
 
 ## STEP 4.
@@ -90,4 +91,4 @@ melted <- melt(CombinedData, id=c("SubjectId", "ActivityLabel"))
 TidyData <- dcast(melted, SubjectId + ActivityLabel ~ variable, mean)
 
 # write the tidy data set to a file
-write.csv(TidyData, "tidy.csv", row.names=FALSE)
+write.table(TidyData, "tidy.txt", row.names=FALSE)
