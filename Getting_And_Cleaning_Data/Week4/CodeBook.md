@@ -1,10 +1,10 @@
-CODE BOOK
+##CODE BOOK
 
 The code book describes the data used in the project, as well as the processes performed to clean up the data. 
 
 ==================================================================
 
-SUMMARY
+**SUMMARY**
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
@@ -13,7 +13,7 @@ wearing a smartphone (Samsung Galaxy S II) on the waist. The smartphone captured
 
 =========================================
 
-THE LIST OF FILES USED IN THE PROJECT
+**THE LIST OF FILES USED IN THE PROJECT**
 
 - 'features.txt': List of all features.
 
@@ -36,14 +36,14 @@ More information about the files is available in README.txt. More information ab
 
 =========================================
 
-DATA FILES THAT WERE NOT USED IN THE PROJECT
+**DATA FILES THAT WERE NOT USED IN THE PROJECT**
 
 This analysis was performed using only the files above, and did not use the raw signal data. 
 
 
 =========================================
 
-PROCESSING STEPS
+**PROCESSING STEPS**
 
 1.  Training and test data have been merged into a single data set
 
